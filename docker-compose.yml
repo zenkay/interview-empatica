@@ -1,0 +1,22 @@
+version: '2'
+services:
+
+  mysql:
+    image: mysql:development
+    ports:
+      - "3306:3306"
+
+  redis:
+    image: redis:development
+    ports:
+      - "6379:6379"
+
+  backend:
+    image: backend:development
+    ports:
+      - "9000:9000"
+
+  frontend:
+    image: frontend:development
+    ports:
+      - "3000:3000"
